@@ -1,14 +1,14 @@
 const people = [
   {
     firstName: "Marcin",
-    lastname: "Butora",
+    lastName: "Butora",
     age: "1983",
     city: "Żywiec",
     profession: "Programmer",
   },
   {
     firstName: "Jan",
-    lastname: "Kowalski",
+    lastName: "Kowalski",
     age: "1992",
     city: "Katowice",
     profession: "Teacher",
@@ -23,16 +23,19 @@ getPeopleList = (list) => {
   return newList;
 };
 
-console.log(getPeopleList(people));
+// console.log(getPeopleList(people));
 
 getPeopleListArray = (list) => {
   const actualYear = new Date().getFullYear();
   return list.map(
-    ({ firstName, lastname, age, city }) =>
-      `${firstName} ${lastname} has ${
+    ({ firstName, lastName, age, city }) =>
+      `${firstName} ${lastName} has ${
         parseInt(actualYear) - parseInt(age)
       } years old and living in ${city}`
   );
 };
 
-console.log(getPeopleListArray(people));
+getPersonByCity = (list, city) => list.filter((person) => person.city == city);
+
+// console.log(getPeopleListArray(people));
+console.log(getPersonByCity(people, "Katowice"));
