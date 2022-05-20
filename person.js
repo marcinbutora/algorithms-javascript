@@ -22,6 +22,7 @@ getPersonByCity = (list, city) => list.filter((person) => person.city == city);
 getPersonByProfession = (list, profession) =>
   list.filter((person) => person.profession == profession);
 
-// console.log(getPeopleListArray(people));
-console.log(getPersonByCity(people, "Katowice"));
-// console.log(getPersonByProfession(people, "Programmer"));
+console.table(getPeopleListArray(people));
+console.table(getPersonByCity(people, "Katowice"));
+console.table(getPersonByProfession(people, "Programmer"));
+console.table(people);
