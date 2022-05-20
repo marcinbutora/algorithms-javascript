@@ -1,19 +1,4 @@
-const people = [
-  {
-    firstName: "Marcin",
-    lastName: "Butora",
-    age: "1983",
-    city: "Żywiec",
-    profession: "Programmer",
-  },
-  {
-    firstName: "Jan",
-    lastName: "Kowalski",
-    age: "1992",
-    city: "Katowice",
-    profession: "Teacher",
-  },
-];
+const people = require("./person-data");
 
 getPeopleList = (list) => {
   let newList = [];
@@ -39,4 +24,4 @@ getPersonByProfession = (list, profession) =>
 
 // console.log(getPeopleListArray(people));
 console.log(getPersonByCity(people, "Katowice"));
-console.log(getPersonByProfession(people, "Programmer"));
+// console.log(getPersonByProfession(people, "Programmer"));
